@@ -1,0 +1,49 @@
+<br/><br/>
+<div class="seconhead">
+<h1>Formulario de Contacto</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <p>Permitenos ayudarte a encontrar lo que necesitas para tu cocina, estamos a tus ordenes.</p>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" id="email" name="emal" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">¿En que podemos ayudarlo?</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="¿En que podemos ayudarlo?" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Mensaje</label>
+          </br>
+          <textarea  name="mensaje" id="mensaje" placeholder="Escriba su mensaje aquí..." class="form-control" required></textarea>
+        </div>
+        <input type="submit" value="Contactar" class="btn btn-primary pull-right"></input>
+      </form>
+    </div>
+    <div class="col-md-6" style="">
+      <div class="well">
+        <h4>Ebany Cocinas</h4><br/>
+        En la Comarca Lagunera:<br/>
+        Valle del Guadiana #645 Parque Industrial Lagunero<br/>
+        Gómez Palacio, Dgo. Tel (871) 193-11-29<br/>
+        
+      </div>
+      <div id="gmap" style="with:300px;height:250px;"></div>
+    </div>
+  </div>
+</div><br/><br/>
+<script type="text/javascript">
+$(function() {
+    new Maplace({
+        locations: [{
+          lat: 25.607446511079377,
+          lon: -103.50293565234375,
+          zoom: 8
+        }],
+        controls_on_map: false
+    }).Load();
+});
+</script>

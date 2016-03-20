@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default marmol-back" style="border-bottom:solid #fff 0.5px; height: 100px;">
+  <div class="container-fluid" style="background: transparent;">
+    <div class="container" style="background: transparent;">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img src="/images/ebany_250/ebany_250_1.png" width="180px;">
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="background: #fff;">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+      </div>
+      <% if mobile_validate? %>
+      <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px; z-index: 99999999999999; background: #fff;">
+        <%else%>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px; z-index: 99999999999999; background: transparent;">
+      <%end%>
+          <ul class="nav navbar-nav navbar-right">
+            <br/>
+            <li ><a href="/">Inicio</a></li>
+            <li role="separator" class="divider"></li>
+            <li ><a href="/galeria">Galeria</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>

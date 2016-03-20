@@ -24,6 +24,18 @@ get "/" do
   erb :"index", layout: :"layouts/app"
 end
 
+get "/contacto" do
+   erb :"contacto", layout: :"layouts/second"
+end
+
+get '/nosotros' do 
+  erb :"nosotros", layout: :"layouts/second"
+end
+
+get '/galeria' do 
+  erb :"galeria", layout: :"layouts/second"
+end
+
 
 get "/contactus" do 
   from_email = "#{params[:email]}"

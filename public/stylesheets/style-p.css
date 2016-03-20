@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Pacifico;
+    src: url(/fonts/Pacifico.ttf);
+}
+
+.footer{
+  background: #000;
+  color: #fff;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  display: block;
+}
+.firsthead{
+  width: 100%;
+  height: 200px;
+  font-size: 75px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 200px;
+  font-family: Pacifico;
+  background: url("/texturas/retina_wood.png");
+  margin-top: -35px;
+}
+
+.wood-back{
+  background: url("/texturas/retina_wood.png");
+}
+
+.marmol-back{
+  background: url("/texturas/food.png") !important;
+}
+.seconhead{
+  width: 100%;
+  padding: 1%;
+  height: 100px;
+  margin-bottom: 15px;
+  background: rgba(187, 189, 194, 0.4);
+}
+
+.supertitle{
+   font-size: 75px;
+   font-family: Pacifico;
+}
