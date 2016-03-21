@@ -1,6 +1,4 @@
-<% if mobile_validate? %>
-<h1>Cocinas Ebany</h1>
-<%else%>
+<% unless mobile_validate? %>
 <div id="carousel-example-generic" class="carousel row slide" data-ride="carousel" >
   <!-- Indicators -->
   <ol class="carousel-indicators">
