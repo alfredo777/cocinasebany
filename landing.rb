@@ -37,7 +37,7 @@ get '/galeria' do
 end
 
 
-get "/contactus" do 
+post "/contactus" do 
   from_email = "#{params[:email]}"
   puts from_email
   mail_stablish = erb :"contact", locals: {email: from_email, name: params[:name], subject: params[:subject], contact: params[:contact] }
