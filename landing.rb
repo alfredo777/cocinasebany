@@ -40,10 +40,12 @@ end
 get "/contactus" do 
   from_email = "#{params[:email]}"
   puts from_email
-  mail_stablish = erb :"contact", locals: {email: from_email, name: params[:name], subject: params[:subject], message: params[:message] }
+  mail_stablish = erb :"contact", locals: {email: from_email, name: params[:name], subject: params[:subject], contact: params[:contact] }
+  puts mail_stablish
   #mail_to_stablish = ["fz@ebanycocinas.com", "p.tovar@ebanycocinas.com","info@ebanycocinas.com"]
   mail_to_stablish = ["jardarubydv@gmail.com", "alfredo@rockstars.mx"]
-  send_mail("no-responder-mail@ebanycocinas.com", "Email de contacto de #{from_email}", mail_stablish, mail_to_stablish)
+  sending = send_mail("no-responder-mail@ebanycocinas.com", "Email de contacto de #{from_email}", mail_stablish, mail_to_stablish)
+  puts sending
   erb :"contactus"
 end
 
