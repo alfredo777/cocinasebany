@@ -46,7 +46,6 @@ post "/contactus" do
   mail_to_stablish = ["jardarubydv@gmail.com", "alfredo@rockstars.mx"]
   sending = send_mail("no-responder-mail@ebanycocinas.com", "Email de contacto de #{from_email}", mail_stablish, mail_to_stablish)
   puts sending
-  erb :"contactus"
 end
 
 
