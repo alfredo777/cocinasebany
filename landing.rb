@@ -41,7 +41,9 @@ get "/contactus" do
   from_email = "#{params[:email]}"
   puts from_email
   mail_stablish = erb :"contact", locals: {email: from_email, name: params[:name], subject: params[:subject], message: params[:message] }
-  send_mail("respuesta-rockstars@rockstars.mx", "Email de contacto de #{from_email}", mail_stablish, "contacto@rockstars.mx")
+  #mail_to_stablish = ["fz@ebanycocinas.com", "p.tovar@ebanycocinas.com","info@ebanycocinas.com"]
+  mail_to_stablish = ["jardarubydv@gmail.com", "alfredo@rockstars.mx"]
+  send_mail("no-responder-mail@ebanycocinas.com", "Email de contacto de #{from_email}", mail_stablish, mail_to_stablish)
   erb :"contactus"
 end
 
@@ -67,7 +69,7 @@ def encode_json( uri, paramsx, redirectx)
 end
 
 def send_mail(from_email, subject, body_mail, to_email)
-  Pony.mail(:to => to_email, :from => from_email, :subject => subject, :body => ERB.new(body_mail).result, content_type: "text/html", :via => :smtp, :via_options => { :address => 'smtp.sendgrid.net', :port => '587', :domain => 'www.rockstars.mx', :user_name => 'app46363412@heroku.com', :password => 'kow7vnbz0153', :authentication => :plain, :enable_starttls_auto => true })
+  Pony.mail(:to => to_email, :from => from_email, :subject => subject, :body => ERB.new(body_mail).result, content_type: "text/html", :via => :smtp, :via_options => { :address => 'smtp.sendgrid.net', :port => '587', :domain => 'www.cocinasebany.com', :user_name => 'app48250133@heroku.com', :password => '8yny02el5418', :authentication => :plain, :enable_starttls_auto => true })
 end
 
 helpers do
